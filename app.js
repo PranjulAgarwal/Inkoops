@@ -1,12 +1,14 @@
 var jet = document.getElementById("jet");
 var jet2 = document.getElementById("jet2");
 var board = document.getElementById("board");
-if(localStorage.getItem("w1")<3&&localStorage.getItem("w2")<3){
-  document.getElementById("won2").innerHTML = localStorage.getItem("w2");
-  document.getElementById("won1").innerHTML = localStorage.getItem("w1");
+if(localStorage.getItem("w1")!=null){
+  if(localStorage.getItem("w1")<3&&localStorage.getItem("w2")<3){
+    document.getElementById("won2").innerHTML = localStorage.getItem("w2");
+    document.getElementById("won1").innerHTML = localStorage.getItem("w1");
+  }
 }else{
-localStorage.setItem("w1", 0);
-localStorage.setItem("w2", 0); 
+  localStorage.setItem("w1", 0);
+  localStorage.setItem("w2", 0); 
 }
 
 window.addEventListener("keydown", (e) => {
