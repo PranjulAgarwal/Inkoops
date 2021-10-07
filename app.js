@@ -56,6 +56,7 @@ window.addEventListener("keydown", (e) => {
           alert("This Game is Won by : Player 1");
           clearInterval(movebullet);
           localStorage.setItem("w1",0);
+          localStorage.setItem("w2",0);
           window.location.reload();
         }else{
           alert("Player 1 won this round");
@@ -126,6 +127,7 @@ window.addEventListener("keydown", (e) => {
             alert("This Game is Won by : Player 2");
             clearInterval(movebullet2);
             localStorage.setItem("w2",0);
+            localStorage.setItem("w1",0);
             window.location.reload();
           }else{
             alert("Player 2 won this round");
